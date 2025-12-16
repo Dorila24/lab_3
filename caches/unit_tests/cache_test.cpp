@@ -25,7 +25,7 @@ TEST(ClockCache, SecondChanceWorks) {
     ClockCache<int, int> cache(2);
     cache.set(1, 10);
     cache.set(2, 20);
-    cache.get (1)
+    cache.get (1);
     cache.set(3, 30);
     EXPECT_TRUE(cache.contains(1));
     EXPECT_FALSE(cache.contains(2));
