@@ -8,8 +8,8 @@
 template <typename Key, typename Value>
 class ClockCache final : public ICache<Key, Value> {
 public:
-    explicit ClockCache(std::size_t capacity)
-        : capacity_(capacity), frames_(capacity) {
+    explicit ClockCache(std::size_t capacity):
+        capacity_(capacity), frames_(capacity) {
         if (capacity_ == 0) {
             throw std::invalid_argument("ClockCache capacity must be > 0");}}
 
